@@ -1,0 +1,17 @@
+{
+	"manifest_version" : 2,
+	"name" : "ScopeDumper",
+	"version": "0.0",
+	"description": "Allows dumping of angular $scope bound to element to console from right-click menu",
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jquery.js", "injector.js", "elementGetter.js"]
+		}
+	],
+	"background": {
+		"scripts": ["contextMenu.js"]
+	},
+	"permissions" : ["contextMenus"],
+	"web_accessible_resources": ["scopeDumper.js"]
+}
