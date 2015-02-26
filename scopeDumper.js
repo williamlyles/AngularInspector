@@ -13,6 +13,7 @@ function dumpScopeToConsole(elementPath)
         	                console.log("Couldn't get scope, dumping element");
         	                scope = element;
         	        }
+                    window.dumpedScope = scope;
         	        console.log(scope);
         	}
 	}
