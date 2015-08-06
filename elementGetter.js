@@ -27,7 +27,7 @@ $('body').mousedown(function(event){
 
 function writeScript(elementPath)
 {
-	return 'dumpScopeToConsole("'+elementPath+'");';	
+	return '__dumpScopeToConsole("'+elementPath+'");';	
 }
 
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse){

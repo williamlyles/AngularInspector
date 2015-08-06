@@ -1,8 +1,8 @@
-function dumpScopeToConsole(elementPath)
+function __dumpScopeToConsole(elementPath)
 {
 	var elFound = false;
 	try{
-        	var element = $(elementPath);
+        	var element = angular.element(document.querySelectorAll(elementPath));
         	if(element.length > 0){
 			elFound = true;
         	        var scope = null;
@@ -13,7 +13,7 @@ function dumpScopeToConsole(elementPath)
         	                console.log("Couldn't get scope, dumping element");
         	                scope = element;
         	        }
-                    window.dumpedScope = scope;
+                    window.$scope = scope;
         	        console.log(scope);
         	}
 	}
